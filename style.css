@@ -75,27 +75,35 @@ body {
     transition: .5s;
     white-space: nowrap;
 }
-.navigation a li:hover, .NavigationMenu a li:hover {
+.navigation a li:hover, #NavigationMenu a li:hover {
     border-color: var(--C1);
 }
-.navigation a li.Active, .NavigationMenu a li.Active {
+.navigation a li.Active, #NavigationMenu a li.Active {
     border-color: var(--C1);
 }
 #MenuBtn {
+    width: 124.33px;
     float: right;
     height: 190px;
     display: none;
     align-items: center;
     flex-direction: column;
 }
-#checkbox {
-    display: none;
-}
 .checkBtn {
-    margin: 0px 20px;
-    margin-top: 12.5px;
+    margin: 14.5px 0px;
+}
+.checkBtn i {
     font-size: 20px;
     color: black;
+}
+/*.fa-xmark::before {
+    display: none;
+}*/
+#check {
+    display: none;
+}
+#check:checked ~ #NavigationMenu {
+    right: 0;
 }
 @media (max-width: 685px) {    
     .navigation a {
@@ -115,12 +123,12 @@ body {
         font-size: 15px;
     }
 }
-@media (max-width: 315px) {
+@media (max-width: 320px) {
     #title {
         width: 100px;
     }
 }
-.NavigationMenu {
+#NavigationMenu {
     gap: 10px;
     padding: 0px 25px;
     background-color: rgb(190, 190, 190);
@@ -130,11 +138,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 12.5px;
-    margin-bottom: 0;
+    margin: 0;
     flex-grow: 0;
+    transition: .3s;
+    right: calc(-100% - 17px);
 }
-.NavigationMenu a li {
+#NavigationMenu a li {
     border-bottom: 2px #32567a00 solid;
     transition: .5s;
     white-space: nowrap;
