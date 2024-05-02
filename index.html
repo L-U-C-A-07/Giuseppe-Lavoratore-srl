@@ -6,7 +6,8 @@
     <!-- style (css) -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
 </link>
 </head>
 <body>
@@ -18,10 +19,8 @@
 
         <div id="Header">
             <div id="InnerHeader">
-    
-                <div id="title">
-                    <h1>Giuseppe Lavoratore srl</h1>
-                </div>
+
+                <img src="Images/OriginalLogo.jpg" class="OriginalLogo">
     
                 <ul class="navigation">
                     <a><li class="Pointer Active">Home</li></a>
@@ -33,8 +32,7 @@
                 <div id="MenuBtn">
                     <input type="checkbox" id="check">
                     <label for="check" class="checkBtn Pointer">
-                        <i class="fa fa-bars"></i>
-                        <!-- <i class="fa fa-xmark"></i> -->
+                        <i class="fa fa-bars" onclick="ChangeIcon(this)"></i>
                     </label>
                     <ul id="NavigationMenu">
                         <a><li class="Pointer Active">Home</li></a>
@@ -48,7 +46,14 @@
         </div>
 
         <div id="ContentContainer">
-            <h1>Hello world</h1>
+            <div class="Content first">
+                <img src="Images/a.jpg" id="ImgA">
+                <img src="Images/ShapeA.svg" class="Shape">
+            </div>
+            <div class="Content">
+                <h1>Chi Siamo ?</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet vestibulum neque. Quisque sit amet est tincidunt, consectetur tellus eu, tincidunt diam. Proin malesuada rhoncus nunc sit amet placerat. Aenean vehicula elit arcu, vel malesuada arcu facilisis non. Nullam in ex dolor. Pellentesque consequat nibh sed augue blandit, non vehicula ante ornare. Donec vel est urna. Sed eu mollis elit. Praesent sagittis leo at odio porta tristique. Praesent vel varius ex, vel tempor neque.</p>
+            </div>
         </div>
 
         <div id="footer">

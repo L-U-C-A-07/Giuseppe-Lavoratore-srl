@@ -1,4 +1,4 @@
-/* =============== general =============== */
+/* ========================= general ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 canvas {
     display: block;
@@ -12,9 +12,12 @@ body {
     font-family: outfit;
 }
 :root {
-    --C1: rgb(50, 86, 122);
+    --C1: #32567a;
+    --Scrollbar: 17px;
+    --Header: 80px;
+    --Footer: 100px;
 }
-/* =============== main page =============== */
+/* ========================= main page ========================= */
 #Container {
     overflow-y: scroll;
     height: 100vh;
@@ -22,42 +25,28 @@ body {
 .Pointer {
     cursor: pointer;
 }
-/* =============== header =============== */
+/* ========================= header ========================= */
 #Header {
     position: fixed;
     background-color: #ffffff;
-    width: calc(100% - 17px);
-    height: 50px;
+    width: calc(100% - var(--Scrollbar));
+    height: var(--Header);
+    z-index: 2;
 }
 #InnerHeader {
     display: table;
     width: 100%;
-    height: 50px;
     color: white;
 }
-.LogoContainer {
-    height: 100%;
-    display: Table;
-    float: left;
-    background-color: red;
-}
-#title {
-    padding-left: 10px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    float: left;
-}
-#title h1 {
-    margin: 0;
-    font-size: 20px;
-    color: black;
+.OriginalLogo {
+    height: calc(var(--Header) - 10px);
+    padding: 5px;
 }
 .navigation {
     display: flex;
     align-items: center;
     float: right;
-    height: 50px;
+    height: var(--Header);
     color: black;
     margin: 0;
 }
@@ -90,15 +79,12 @@ body {
     flex-direction: column;
 }
 .checkBtn {
-    margin: 14.5px 0px;
+    margin: calc((var(--Header) - 21px) / 2) 0;
 }
 .checkBtn i {
     font-size: 20px;
     color: black;
 }
-/*.fa-xmark::before {
-    display: none;
-}*/
 #check {
     display: none;
 }
@@ -116,16 +102,6 @@ body {
     }
     #MenuBtn {
         display: flex;
-    }
-}
-@media (max-width: 380px) {
-    #title h1 {
-        font-size: 15px;
-    }
-}
-@media (max-width: 320px) {
-    #title {
-        width: 100px;
     }
 }
 #NavigationMenu {
@@ -149,18 +125,43 @@ body {
     white-space: nowrap;
     width: fit-content;
 }
-/* =============== content =============== */
+/* ========================= content ========================= */
 #ContentContainer {
-    padding: 10px;
     background-color: var(--C1);
-    margin-top: 50px;
-    min-height: calc(100% - 170px);
+    margin-top: var(--Header);
+    min-height: calc(100% - var(--Header) - var(--Footer));
 }
-/* =============== footer =============== */
+.Content {
+    color: white;
+    padding: 10px;
+    min-height: fit-content;
+}
+.first {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    padding: 0;
+}
+#ImgA {
+    position: absolute;
+    width: 100%;
+    vertical-align: middle;
+}
+.Shape {
+    position: absolute;
+    width: 100%;
+    vertical-align: middle;
+}
+#ShapeB {
+    width: 500px;
+    top: -50px;
+}
+/* ========================= footer ========================= */
 #footer {
     position: relative;
     padding-left: 10px;
-    height: 100px;
+    height: var(--Footer);
     background-color: white;
 }
 #footer img {
