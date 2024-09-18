@@ -18,7 +18,7 @@ body {
     --C2t: #0c2d5800;
     --C3: #fff;
     --C4: #131313;
-    --SoftShadow: rgba(231, 231, 231, 0.055);
+    --SoftShadow: rgba(231, 231, 231, 0.068);
     --Scrollbar: 17px;
     --Header: 70px;
     --Footer: 100px;
@@ -132,7 +132,8 @@ body {
 #ContentContainer h1 {
     color: var(--C1);
     font-size: 35px;
-    /*text-decoration: underline overline var(--C1);*/
+    /* text-shadow: 0 0 50px var(--C1);
+    text-decoration: underline overline var(--C1); */
 }
 #ContentContainer p {
     color: var(--C4);
