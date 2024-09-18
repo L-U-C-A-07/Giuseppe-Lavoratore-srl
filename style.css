@@ -8,15 +8,16 @@ body {
     padding: 0;
     user-select: none;
     overflow: hidden;
-    background-color: var(--C1);
+    background-color: var(--C3);
     font-family: outfit;
+    background-image: url("./Images/Back.svg");
 }
 :root {
     --C1: #32567a;
-    --C1t: #32567ae8;
     --C2: #0c2d58;
     --C2t: #0c2d5800;
     --C3: #fff;
+    --C4: #131313;
     --SoftShadow: rgba(231, 231, 231, 0.055);
     --Scrollbar: 17px;
     --Header: 70px;
@@ -96,19 +97,6 @@ body {
 #check:checked ~ #NavigationMenu {
     right: 0;
 }
-@media (max-width: 685px) {    
-    .navigation a {
-        padding: 0px 10px;
-    }
-}
-@media (max-width: 605px) {
-    .navigation{
-        display: none;
-    }
-    #MenuBtn {
-        display: flex;
-    }
-}
 #NavigationMenu {
     gap: 10px;
     padding: 5px 25px;
@@ -137,22 +125,37 @@ body {
     width: 100%;
     margin-top: var(--Header);
     min-height: calc(100vh - var(--Header) - var(--Footer));
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
 }
-.ContentA {
-    color: white;
+#ContentContainer h1 {
+    color: var(--C1);
+    font-size: 35px;
+    /*text-decoration: underline overline var(--C1);*/
+}
+#ContentContainer p {
+    color: var(--C4);
+    font-weight: 500;
+    font-size: 17px;
+}
+.Content {
     padding: 10px;
     min-height: fit-content;
 }
-@media (max-width: 500px) {
-    #ImgA, #ShapeA, .first {
-        width: 500px
-    }
+.A {
+    display: flex;
+    align-items: center;
+}
+.A img {
+    width: 100%;
+    border-radius: 4px;
 }
 /* ========================= footer ========================= */
 #footer {
     padding-left: 10px;
     height: var(--Footer);
-    background-color: white;
+    background-color: var(--C1);
 }
 #f1 {
     display: inline-flex;
@@ -161,4 +164,23 @@ body {
 #footer div img {
     vertical-align: middle;
     height: calc(var(--Footer) - 10px);
+}
+/* ========================= media ========================= */
+@media (max-width: 685px) {    
+    .navigation a {
+        padding: 0px 10px;
+    }
+}
+@media (max-width: 605px) {
+    .navigation{
+        display: none;
+    }
+    #MenuBtn {
+        display: flex;
+    }
+}
+@media (max-width: 675px) {
+    #ContentContainer {
+        grid-template-columns: auto;
+    }
 }
