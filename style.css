@@ -10,7 +10,7 @@ body {
     overflow: hidden;
     background-color: var(--C3);
     font-family: outfit;
-    background-image: url("./Images/Back.svg");
+    /*background-image: url("./Images/Back.svg");*/
 }
 :root {
     --C1: #32567a;
@@ -34,11 +34,11 @@ body {
 /* ========================= header ========================= */
 #Header {
     position: fixed;
-    background-color: var(--C1);
+    background-color: #ffffff00;
     width: calc(100% - var(--Scrollbar));
     height: var(--Header);
     z-index: 2;
-    box-shadow: 0 5px 5px var(--SoftShadow);
+    /*box-shadow: 0 5px 5px var(--SoftShadow);*/
 }
 #InnerHeader {
     display: table;
@@ -53,7 +53,7 @@ body {
     align-items: center;
     float: right;
     height: var(--Header);
-    color: var(--C3);
+    color: var(--C1);
     margin: 0;
 }
 .navigation a {
@@ -123,19 +123,29 @@ body {
 /* ========================= content ========================= */
 #ContentContainer {
     width: 100%;
-    margin-top: var(--Header);
-    min-height: calc(100vh - var(--Header) - var(--Footer));
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 20px;
+    min-height: calc(100vh - var(--Footer));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
 }
 #ContentContainer h1 {
     color: var(--C1);
     font-size: 35px;
     /* text-shadow: 0 0 50px var(--C1);
-    text-decoration: underline overline var(--C1); */
+    text-decoration: underline overline var(--C1);*/
 }
-#ContentContainer p {
+#ContentContainer img {
+    position: absolute;
+    height: 100%;
+}
+#InclineBG {
+    position: absolute;
+    width: 5000px;
+    height: 5000px;
+
+}
+/*#ContentContainer p {
     color: var(--C4);
     font-weight: 500;
     font-size: 17px;
@@ -151,9 +161,10 @@ body {
 .A img {
     width: 100%;
     border-radius: 4px;
-}
+}*/
 /* ========================= footer ========================= */
 #footer {
+    position: relative;
     padding-left: 10px;
     height: var(--Footer);
     background-color: var(--C1);
