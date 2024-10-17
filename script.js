@@ -1,4 +1,6 @@
-console.log("v 0.2.11");
+console.log("v 0.2.12");
+
+/* stavo facendo i link del footer, ma scendono sotto la pagina di qualche px */
 
 // Navigation Menu Icon Change
 let ChangeIcon = function(icon) {
@@ -12,7 +14,6 @@ window.onscroll = () => {
     let BC = document.getElementById("BlackCover");
     BC.style.opacity = Math.round((scr / 400) * 10) / 10;
     if (scr >= 400) {
-        head.style.position = "fixed";
         head.style.top = "0px";
         head.style.backgroundColor = "var(--C3)";
         head.style.boxShadow = "var(--SoftShadow)";
@@ -21,9 +22,9 @@ window.onscroll = () => {
         head.style.top = "calc(-1 * var(--Header))";
     }
     else {
-        head.style.position = "absolute";
         head.style.top = "0px";
         head.style.backgroundColor = "#ffffff00";
         head.style.boxShadow = "none";
+        head.style.top = -1 * scr + "px";
     }
 }
