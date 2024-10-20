@@ -1,156 +1,4 @@
-/* ========================= general ========================= */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Teko:wght@300..700&display=swap');
-canvas {
-    display: block;
-}
-body {
-    margin: 0;
-    padding: 0;
-    user-select: none;
-    background-color: var(--C2);
-    font-family: outfit;
-    letter-spacing: .8px;
-}
-:root {
-    --C1: #00aeff;/* #32567a */
-    --C2: #fff;
-    --C2t: #ffffff00;
-    --C3: #131313;
-    --SoftShadow: 0 2px 15px rgba(231, 231, 231, 0.03);
-    --SoftShadow2: 0 -2px 15px rgba(231, 231, 231, 0.03);
-    --Scrollbar: 10px;
-    --Header: 70px;
-    --Footer: 100px;
-}
-/* ========================= main page ========================= */
-#Container {
-    height: 100vh;
-    color: white;
-}
-.Pointer {
-    cursor: pointer;
-}
-.link {
-    color: var(--C2);
-    text-decoration: none;
-}
-.link:hover {
-    color: var(--C1);
-}
-::-webkit-scrollbar {
-    width: var(--Scrollbar);
-}
-::-webkit-scrollbar-track {
-    background: #0c0c0c;
-    padding: 2px;
-    width: 4px;
-}
-::-webkit-scrollbar-thumb {
-    background: var(--C2);
-}
-/* ========================= header ========================= */
-#Header {
-    position: fixed;
-    background-color: #ffffff00;
-    width: calc(100vw - var(--Scrollbar));
-    height: var(--Header);
-    z-index: 2;
-    transition: top .3s, background-color 0s;
-    /*box-shadow: 0 5px 5px var(--SoftShadow);*/
-}
-#InnerHeader {
-    width: 100%;
-    height: var(--Header);
-}
-.OriginalLogo {
-    height: calc(var(--Header) - 10px);
-    padding: 5px;
-}
-.navigation {
-    display: flex;
-    align-items: center;
-    float: right;
-    height: var(--Header);
-    color: var(--C2);
-    margin: 0;
-}
-.navigation a {
-    height: 20px;
-    display: table;
-    float: left;
-    padding: 0px 20px;
-}
-.navigation a li {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    border-bottom: 2px var(--C2t) solid;
-    transition: .5s;
-    white-space: nowrap;
-}
-.navigation a li:hover, #NavigationMenu a li:hover {
-    border-color: var(--C2);
-}
-.navigation a li.Active, #NavigationMenu a li.Active {
-    color: var(--C1);
-    border-color: var(--C1);
-}
-#MenuBtn {
-    width: 124.33px;
-    float: right;
-    display: none;
-    align-items: center;
-    flex-direction: column;
-}
-.checkBtn {
-    margin: calc((var(--Header) - 21px) / 2) 0;
-}
-.checkBtn i {
-    font-size: 20px;
-    color: var(--C2);
-}
-#check {
-    display: none;
-}
-#check:checked ~ #NavigationMenu {
-    right: 0px;
-    display: flex;
-}
-#NavigationMenu {
-    gap: 10px;
-    padding: 5px 25px;
-    background-color: rgba(18, 18, 18, 0.466);
-    position: relative;
-    height: 100%;
-    list-style-type: none;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    transition: all .3s;
-    margin: 0;
-    flex-grow: 0;
-    right: calc(-100% - var(--Scrollbar));
-    box-shadow: var(--SoftShadow);
-    border-radius: 0px 0px 0px 5px;
-}
-#NavigationMenu a li {
-    border-bottom: 2px var(--C2t) solid;
-    transition: .5s;
-    white-space: nowrap;
-    width: fit-content;
-    color: var(--C2);
-}
 /* ========================= content ========================= */
-#ContentContainer {
-    position: relative;
-    width: calc(100vw - var(--Scrollbar));
-    min-height: calc(100vh - var(--Footer));
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-    background-color: var(--C3);
-}
 #FirstScreen {
     position: relative;
     width: 100%;
@@ -211,7 +59,7 @@ body {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, auto);
-    grid-template-rows: auto;
+    grid-template-rows: 70px auto;
     gap: 35px;
 }
 .ImgBox {
@@ -257,51 +105,8 @@ body {
     background-position: center;
     
 }
-/* ========================= footer ========================= */
-#footer {
-    width: calc(100vw - var(--Scrollbar) - 10px);
-    position: relative;
-    padding-left: 10px;
-    height: var(--Footer);
-    background-color: var(--C3);
-    border-top: solid 2px var(--C2);
-    z-index: 2;
-    display: flex;
-    gap: 30px;
-}
-#f1 {
-    display: inline-flex;
-    padding: 5px;
-}
-#f2 {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-#f2 a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-}
-#footer div img {
-    vertical-align: middle;
-    height: calc(var(--Footer) - 10px);
-}
 /* ========================= media ========================= */
-@media (max-width: 605px) {
-    .navigation{
-        display: none;
-    }
-    #MenuBtn {
-        display: flex;
-    }
-}
-@media (max-width: 675px) {
-    #ContentContainer {
-        grid-template-columns: auto;
-    }
-}
+/* Rimpicciolisco Img Servizi */
 @media (max-width: 1010px) {
     .ImgBox {
         width: 220px;

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giuseppe Lavoratore srl</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- style (css) -->
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="CO.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</link>
+</head>
+<body>
+    
+    <div id="Container">
+
+        <div id="Header">
+            <div id="InnerHeader">
+
+                <a href="https://www.google.com">
+                    <img src="../../Images/WhiteLogo.png" class="OriginalLogo">
+                </a>
+    
+                <ul class="navigation">
+                    <a href="../../index.html"><li class="Pointer">Home</li></a>
+                    <a href="../ChiSiamo/CS.html"><li class="Pointer">Chi Siamo</li></a>
+                    <a href="../Servizi/SV.html"><li class="Pointer">Servizi</li></a>
+                    <a><li class="Pointer  Active">Contattaci</li></a>
+                </ul>
+                
+                <div id="MenuBtn">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkBtn Pointer">
+                        <i class="fa fa-bars" onclick="ChangeIcon(this)"></i>
+                    </label>
+                    <ul id="NavigationMenu">
+                        <a href="../../index.html"><li class="Pointer">Home</li></a>
+                        <a href="../ChiSiamo/CS.html"><li class="Pointer">Chi Siamo</li></a>
+                        <a href="../Servizi/SV.html"><li class="Pointer">Servizi</li></a>
+                        <a><li class="Pointer  Active">Contattaci</li></a>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="ContentContainer">
+            <div id="FirstScreen">
+
+                <div id="Info">
+                    <p style="font-size: 15px; color: var(--C1);">INFO</p>
+                    <i class="fa-solid fa-map-location"> via san gennaro 78</i>
+                    <i class="fa fa-phone"> 333.444.55.66</i>
+                    <i class="fa fa-envelope"> email@gmail.com</i>
+                    <p>Dal Lunedì al Venerdì<br>9:00 - 16:00</p>
+                    <img src="../../Images/Aereo.png" alt="">
+                </div>
+
+                <div id="ContactForm">
+                    <h3>Scrivici!</h3>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="cf59adb7-53b8-49ab-958d-5ad1636662b5">
+                        <div id="Campi">
+                            <div class="campo">
+                                <p>Nome e Cognome*</p>
+                                <input name="Nome" type="text" placeholder="Mario Rossi" minlength="4" maxlength="100" required="required">
+                            </div>
+                            <div class="campo">
+                                <p>Indirizzo Email*</p>
+                                <input name="Email" type="text" placeholder="MarioRossi@gmail.com" maxlength="100" required="required">
+                            </div>
+                            <div class="campo">
+                                <p>Numero DI Telefono</p>
+                                <input name="Numero" type="text" maxlength="10">
+                            </div>
+                            <div class="campo mex">
+                                <p>Messaggio*</p>
+                                <textarea name="Messaggio" placeholder="Come possiamo aiutarti?" required="required"></textarea>
+                            </div>
+                        </div>
+                        <div class="send">
+                            <input type="submit" value="INVIA" class="Pointer">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="f1">
+                <a href="https://www.google.com">
+                    <img src="../../Images/WhiteLogo.png" alt="Logo">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- script (js) -->
+    <script src="../../main.js"></script>
+    <script src="CO.js"></script>
+
+</body>
+</html>
