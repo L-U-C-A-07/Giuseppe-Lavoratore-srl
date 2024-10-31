@@ -1,5 +1,5 @@
 console.log("v 0.3.1");
-// fatta la pagina contatti, aggiunte le altre pagine
+// adattamenti pagina contatti, e il footer non va
 
 // Navigation Menu Icon Change
 let ChangeIcon = function(icon) {
@@ -33,4 +33,5 @@ fetch("/htmlComm/footer.html")
 .then(res => res.text())
 .then(data => {
     footer.innerHTML += data;
+    console.log(footer);
 })
