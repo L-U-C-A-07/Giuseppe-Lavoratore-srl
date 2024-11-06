@@ -9,6 +9,7 @@ const footer = document.getElementById("footer");
 fetch("/htmlComm/footer.html")
 .then(res => res.text())
 .then(data => {
-    footer.innerHTML += data;
+    console.log(data);
+    footer.innerHTML = footer.innerHTML + data;
     console.log(footer);
 })
