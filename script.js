@@ -3,3 +3,12 @@ window.addEventListener("scroll", () => {
     let BC = document.getElementById("BlackCover");
     BC.style.opacity = Math.round((scr / 400) * 10) / 10;
 })
+
+// Import htmlComm
+const footer = document.getElementById("footer");
+fetch("/htmlComm/footer.html")
+.then(res => res.text())
+.then(data => {
+    footer.innerHTML += data;
+    console.log(footer);
+})

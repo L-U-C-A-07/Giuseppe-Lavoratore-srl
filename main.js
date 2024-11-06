@@ -1,4 +1,4 @@
-console.log("v 0.3.1");
+console.log("v 0.3.2");
 // adattamenti pagina contatti, e il footer non va
 
 // Navigation Menu Icon Change
@@ -25,13 +25,4 @@ window.addEventListener("scroll", () => {
         head.style.boxShadow = "none";
         head.style.top = -1 * scr + "px";
     }
-})
-
-// Import htmlComm
-const footer = document.getElementById("footer");
-fetch("/htmlComm/footer.html")
-.then(res => res.text())
-.then(data => {
-    footer.innerHTML += data;
-    console.log(footer);
 })
