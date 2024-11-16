@@ -73,7 +73,7 @@
 }
 .ImgBox div {
     width: 100%;
-    background-color: #1313138e;
+    background-color: #13131359;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,19 +87,19 @@
     color: var(--C1);
 }
 .ImgBox.img1 {
-    background-image: url(Images/a.jpg);
+    background-image: url(Images/HomeSV/a.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .ImgBox.img2 {
-    background-image: url(Images/a.jpg);
+    background-image: url(Images/HomeSV/b.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .ImgBox.img3 {
-    background-image: url(Images/a.jpg);
+    background-image: url(Images/HomeSV/c.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

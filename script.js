@@ -5,11 +5,11 @@ window.addEventListener("scroll", () => {
 })
 
 // Import htmlComm
-const footer = document.getElementById("footer");
-fetch("/htmlComm/footer.html")
-.then(res => res.text())
-.then(data => {
-    console.log(data);
-    footer.innerHTML = footer.innerHTML + data;
-    console.log(footer);
-})
+// const footer = document.getElementById("footer");
+// fetch("/htmlComm/footer.html")
+// .then(res => res.text())
+// .then(data => {
+//     console.log("data:", data);
+//     footer.innerHTML = footer.innerHTML + data;
+//     console.log(footer);
+// })

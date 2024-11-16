@@ -93,9 +93,12 @@ body {
 .navigation a li:hover, #NavigationMenu a li:hover {
     border-color: var(--C2);
 }
+.navigation a li.Active:hover, #NavigationMenu a li.Active:hover {
+    border-color: var(--C1);
+}
 .navigation a li.Active, #NavigationMenu a li.Active {
     color: var(--C1);
-    border-color: var(--C1);
+    /* border-color: var(--C1); */
 }
 #MenuBtn {
     width: 124.33px;
@@ -103,6 +106,7 @@ body {
     display: none;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 .checkBtn {
     margin: calc((var(--Header) - 21px) / 2) 0;
@@ -134,6 +138,7 @@ body {
     right: calc(-100% - var(--Scrollbar));
     box-shadow: var(--SoftShadow);
     border-radius: 0px 0px 0px 5px;
+    backdrop-filter: blur(2.5px);
 }
 #NavigationMenu a {
     text-decoration: none;
