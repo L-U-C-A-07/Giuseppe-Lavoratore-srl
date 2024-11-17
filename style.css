@@ -73,7 +73,7 @@
 }
 .ImgBox div {
     width: 100%;
-    background-color: #13131359;
+    background-color: #13131300;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +83,7 @@
     transition: .4s;
 }
 .ImgBox div:hover {
-    box-shadow: inset 0px 6px var(--C1), inset 0px -6px var(--C1);
+    /* box-shadow: inset 0px 6px var(--C1), inset 0px -6px var(--C1); */
     color: var(--C1);
 }
 .ImgBox.img1 {

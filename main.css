@@ -38,6 +38,12 @@ body {
 .link:hover {
     color: var(--C1);
 }
+.TxtShadow {
+    text-shadow: 0 0 5px black;
+}
+.TxtShadow2 {
+    text-shadow: 0 0 13px black;
+}
 ::-webkit-scrollbar {
     width: var(--Scrollbar);
 }
@@ -89,6 +95,30 @@ body {
     border-bottom: 2px var(--C2t) solid;
     transition: .5s;
     white-space: nowrap;
+}
+.dropdown {
+    height: 47px;
+    padding-top: 25.5px;
+}
+.dropdown-content {
+    padding: 5px 0;
+    display: none;
+    flex-direction: column;
+    margin-top: 47px;
+    position: absolute;
+    background-color: rgba(18, 18, 18, 0.466);
+    gap: 5px;
+    box-shadow: var(--SoftShadow);
+    border-radius: 0px 0px 5px 5px;
+    backdrop-filter: blur(2.5px);
+}
+.dropdown-content a {
+    display: block;
+    white-space: nowrap;
+    padding: 0 10px;
+}
+.dropdown:hover .dropdown-content {
+    display: flex;
 }
 .navigation a li:hover, #NavigationMenu a li:hover {
     border-color: var(--C2);

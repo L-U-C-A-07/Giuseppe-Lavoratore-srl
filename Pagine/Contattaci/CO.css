@@ -1,6 +1,12 @@
 html {
     overflow-y: hidden;
 }
+/* nascondo le frecce dell'input "numero" (non funziona x firefox) */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 /* ========================= header ========================= */
 #Header {
     background-color: var(--C3);
@@ -73,11 +79,12 @@ input, textarea {
     width: 100%;
     border-radius: 4px;
     border: none;
-    outline: solid 2px lightgray;
+    outline: solid 1px lightgray;
     padding: 3px;
     font-size: 15px;
     font-family: Outfit;
     background-color: transparent;
+    color: var(--C2);
 }
 input:focus, textarea:focus {
     outline: solid 2px var(--C1);

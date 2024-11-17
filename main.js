@@ -1,6 +1,7 @@
-console.log("v 0.4.2");
-// aggiustata pagina contattaci, stavo impostando il bg della pagina SV
+console.log("v 0.4.3");
+// creare pagina SV
 // da aggiustare footer
+// impostare link x immagini e servizi (anche nel footer)
 
 // Navigation Menu Icon Change
 let ChangeIcon = function(icon) {
