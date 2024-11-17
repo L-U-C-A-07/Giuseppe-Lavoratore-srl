@@ -1,3 +1,6 @@
+// !! VALE ANCHE PER LE PAGINE DEI SERVIZI !!
+
+// Black Cover
 window.addEventListener("scroll", () => {
     let scr = window.scrollY;
     let BC = document.getElementById("BlackCover");

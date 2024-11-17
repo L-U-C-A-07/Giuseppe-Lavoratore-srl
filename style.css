@@ -43,7 +43,9 @@
 #ServiziImg {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: calc(100% - 200px);
     background-color: var(--C3);
     /* ↓ DA TOGLIERE SE AGGIUNGO ALTRO ↓ */
@@ -70,8 +72,11 @@
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.ImgBox div {
+.ImgBox a {
     width: 100%;
     background-color: #13131300;
     display: flex;
@@ -82,28 +87,27 @@
     box-shadow: inset 0px 0px var(--C1);
     transition: .4s;
 }
-.ImgBox div:hover {
+.ImgBox a:hover {
     /* box-shadow: inset 0px 6px var(--C1), inset 0px -6px var(--C1); */
     color: var(--C1);
 }
 .ImgBox.img1 {
     background-image: url(Images/HomeSV/a.JPG);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .ImgBox.img2 {
     background-image: url(Images/HomeSV/b.JPG);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .ImgBox.img3 {
     background-image: url(Images/HomeSV/c.JPG);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    
+}
+.ImgBox.img4 {
+    background-image: url(Images/HomeSV/d.JPG);
+}
+.ImgBox.img5 {
+    background-image: url(Images/HomeSV/e.JPG);
+}
+.ImgBox.img6 {
+    background-image: url(Images/HomeSV/f.JPG);
 }
 /* ========================= media ========================= */
 /* Rimpicciolisco Img Servizi */
@@ -134,6 +138,9 @@
     }
 }
 @media (max-width: 520px) {
+    #ServiziImg {
+        width: calc(100% - 50px);
+    }
     #ServiziImg h1 {
         grid-column: 1;
     }

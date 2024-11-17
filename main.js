@@ -1,4 +1,4 @@
-console.log("v 0.4.3");
+console.log("v 0.4.4");
 // creare pagina SV
 // da aggiustare footer
 // impostare link x immagini e servizi (anche nel footer)
