@@ -28,7 +28,7 @@
 #BlackCover {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 101%;
     background-color: var(--C3);
     opacity: 0;
 }
@@ -39,6 +39,9 @@
     min-height: calc(100vh - var(--Header) - var(--Footer));
     gap: 50px;
 }
+h1 {
+    color: var(--C1);
+}
 #Cantieri {
     position: relative;
     display: flex;
@@ -46,16 +49,83 @@
     width: calc(100% - 200px);
     background-color: var(--C3);
     padding-top: 30px;
-    /* ↓ DA TOGLIERE SE AGGIUNGO ALTRO ↓ */
-    margin-bottom: 50px;
 }
 #Cantieri h1, #Cantieri h2 {
     white-space: nowrap;
     margin: 5px 0;
 }
-#Cantieri img {
-    
+.Cantiere {
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    margin-bottom: 50px;
 }
-#Cantieri img a {
-    background-image: url("../../../Images/SV/Coperture");
+.img {
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    transition: all .2s;
+}
+.img:hover {
+    outline: solid 1px var(--C1);
+    /* box-shadow: 0 0 8px var(--C1); */
+    border-radius: 2px;
+}
+#ImgZoom {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--C3);
+    opacity: .9;
+    backdrop-filter: blur(5px);
+    z-index: 3;
+}
+.closeBtn {
+    background: none;
+    border: none;
+    font-size: 40px;
+    padding: 20px;
+    color: var(--C2);
+    position: absolute;
+}
+#BigImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+}
+.move {
+    width: 50px;
+}
+/* ========================= media ========================= */
+@media (max-width: 1150px) {
+    .Cantiere {
+        grid-template-columns: repeat(3, auto);
+    }
+    #Cantieri {
+        width: calc(100% - 120px);
+    }
+}
+@media (max-width: 705px) {
+    .Cantiere {
+        grid-template-columns: repeat(2, auto);
+    }
+    #Cantieri {
+        width: calc(100% - 70px);
+    }
+}
+@media (max-width: 450px) {
+    .Cantiere {
+        grid-template-columns: auto;
+    }
+    #Cantieri {
+        width: calc(100% - 90px);
+    }
 }

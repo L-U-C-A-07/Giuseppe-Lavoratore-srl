@@ -51,7 +51,7 @@ body {
     text-shadow: 0 0 5px rgb(34, 34, 34);
 }
 .TxtShadow2 {
-    text-shadow: 0 0 13px rgb(34, 34, 34);
+    text-shadow: 0 0 15px rgb(34, 34, 34);
 }
 ::-webkit-scrollbar {
     width: var(--Scrollbar);

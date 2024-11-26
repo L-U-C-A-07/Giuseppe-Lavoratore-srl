@@ -15,7 +15,7 @@ input::-webkit-inner-spin-button {
 #FirstScreen {
     position: relative;
     width: 100%;
-    /* height: calc(100vh - var(--Header) - var(--Footer)); */
+    min-height: calc(100vh - var(--Header) - var(--Footer));
     font-size: 30px;
     font-weight: bold;
     display: grid;
