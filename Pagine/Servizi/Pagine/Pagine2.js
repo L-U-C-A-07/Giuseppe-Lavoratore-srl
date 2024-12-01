@@ -10,9 +10,11 @@ function OpenImg(Sezione, Cantiere, n, img) {
     Curr = img;
     len = n - 1;
     if (img == "k" & Sezione == "Coperture" & Cantiere == "Siracusa") {
-        ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + Sezione + '/' + Cantiere + '/' + img + '.jgp)';
+        console.log("k");
+        ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + Sezione + '/' + Cantiere + '/' + img + '.jpg)';
     }
     else {
+        console.log("not k", img, Sezione, Cantiere);
         ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + Sezione + '/' + Cantiere + '/' + img + '.JPG)';
     }
     ImgZoom.style.display = "block";
@@ -65,11 +67,11 @@ function MoveL() {
 
 function MoveR() {
     if (Position != "last") {
-        if (abc[abc.indexOf(Curr) - 1] == "k") {
-            ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) - 1] + '.jpg")';
+        if (abc[abc.indexOf(Curr) + 1] == "k") {
+            ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) + 1] + '.jpg")';
         }
         else {
-            ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) - 1] + '.JPG")';
+            ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) + 1] + '.JPG")';
         }
         if (Curr == abc[len - 1]) {
             document.getElementById("moveR").style.opacity = ".2";
