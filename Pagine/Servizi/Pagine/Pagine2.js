@@ -9,7 +9,12 @@ var len
 function OpenImg(Sezione, Cantiere, n, img) {
     Curr = img;
     len = n - 1;
-    ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + Sezione + '/' + Cantiere + '/' + img + '.JPG)';
+    if (img == "k" & Sezione == "Coperture" & Cantiere == "Siracusa") {
+        ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + Sezione + '/' + Cantiere + '/' + img + '.jgp)';
+    }
+    else {
+        ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + Sezione + '/' + Cantiere + '/' + img + '.JPG)';
+    }
     ImgZoom.style.display = "block";
     let h = document.querySelector("html");
     h.style.overflowY = "hidden";
@@ -38,7 +43,12 @@ function OpenImg(Sezione, Cantiere, n, img) {
 
 function MoveL() {
     if (Position != "first") {
-        ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) - 1] + '.JPG")';
+        if (abc[abc.indexOf(Curr) - 1] == "k") {
+            ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) - 1] + '.jpg")';
+        }
+        else {
+            ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) - 1] + '.JPG")';
+        }
         if (Curr == "b") {
             document.getElementById("moveL").style.opacity = ".2";
             document.getElementById("moveL").classList.remove("Pointer");
@@ -55,7 +65,12 @@ function MoveL() {
 
 function MoveR() {
     if (Position != "last") {
-        ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) + 1] + '.JPG")';
+        if (abc[abc.indexOf(Curr) - 1] == "k") {
+            ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) - 1] + '.jpg")';
+        }
+        else {
+            ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) - 1] + '.JPG")';
+        }
         if (Curr == abc[len - 1]) {
             document.getElementById("moveR").style.opacity = ".2";
             document.getElementById("moveR").classList.remove("Pointer");

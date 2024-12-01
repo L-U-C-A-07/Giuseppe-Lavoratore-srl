@@ -1,4 +1,4 @@
-console.log("v 0.4.6");
+console.log("v 0.4.7");
 // fatto zoom immagini spero
 // creare pagina SV
 // da aggiustare footer
