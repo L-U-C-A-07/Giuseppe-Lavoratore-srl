@@ -9,7 +9,7 @@ var len
 function OpenImg(Sezione, Cantiere, n, img) {
     Curr = img;
     len = n - 1;
-    if (img == "l" & Sezione == "Coperture" & Cantiere == "Siracusa") {
+    if (img == "l" || img == "k" || img == "m" & Sezione == "Coperture" & Cantiere == "Siracusa") {
         ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + Sezione + '/' + Cantiere + '/' + img + '.jpg)';
     }
     else {
