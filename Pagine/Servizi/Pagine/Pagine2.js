@@ -65,7 +65,7 @@ function MoveL() {
 
 function MoveR() {
     if (Position != "last") {
-        if (abc[abc.indexOf(Curr) + 1] == "l") {
+        if (abc[abc.indexOf(Curr) + 1] == "l" || abc[abc.indexOf(Curr) + 1] == "k" || abc[abc.indexOf(Curr) + 1] == "m") {
             ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) + 1] + '.jpg")';
         }
         else {

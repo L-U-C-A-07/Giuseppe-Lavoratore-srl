@@ -1,8 +1,9 @@
-console.log("v 0.4.10");
-// fatto zoom immagini spero
-// creare pagina SV
+// !! VALE PER TUTTE LE PAGINE !!
+
+console.log("v 0.4.11");
 // da aggiustare footer
 // impostare link x immagini e servizi (anche nel footer)
+// modificare il footer su tutte le pagine
 
 // Navigation Menu Icon Change
 let ChangeIcon = function(icon) {
@@ -33,3 +34,9 @@ window.addEventListener("scroll", () => {
         }
     }
 })
+
+// copy to clipboard
+function Copia(ogg, txt) {
+    navigator.clipboard.writeText(txt);
+    alert(ogg + " copied");
+}
