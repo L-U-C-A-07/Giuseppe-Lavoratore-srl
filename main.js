@@ -1,7 +1,7 @@
 // !! VALE PER TUTTE LE PAGINE !!
 
 console.log("%cWebsite under development", "color: red; font-size: 20px; font-famili: sans-serif;");
-console.log("v 0.4.15");
+console.log("v 0.4.17");
 console.log("© Giuseppe Lavoratore s.r.l. 2025 all rights reserved");
 // rimesso tutto dopo che si è cancellato da solo
 // da aggiustare footer
