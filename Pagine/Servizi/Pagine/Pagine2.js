@@ -5,20 +5,17 @@ let ToChange = document.getElementById("imgChild");
 var Position
 var Curr
 var len
-var SezGlob
-var CantGlob
 
 function OpenImg(Sezione, Cantiere, n, img) {
     Curr = img;
     len = n - 1;
-    SezGlob = Sezione;
-    CantGlob = Cantiere;
-    if (img == "l" || img == "k" || img == "m" & Sezione == "Coperture" & Cantiere == "Siracusa") {
-        ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + Sezione + '/' + Cantiere + '/' + img + '.jpg)';
-    }
-    else {
-        ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + Sezione + '/' + Cantiere + '/' + img + '.JPG)';
-    }
+    ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + Sezione + '/' + Cantiere + '/' + img + '.jpg)';
+    // if (img == "l" || img == "k" || img == "m" & Sezione == "Coperture" & Cantiere == "Siracusa") {
+    //     ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + Sezione + '/' + Cantiere + '/' + img + '.jpg)';
+    // }
+    // else {
+    //     ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + Sezione + '/' + Cantiere + '/' + img + '.JPG)';
+    // }
     ImgZoom.style.display = "block";
     let h = document.querySelector("html");
     h.style.overflowY = "hidden";
@@ -47,12 +44,13 @@ function OpenImg(Sezione, Cantiere, n, img) {
 
 function MoveL() {
     if (Position != "first") {
-        if (abc[abc.indexOf(Curr) - 1] == "l" || abc[abc.indexOf(Curr) - 1] == "k" || abc[abc.indexOf(Curr) - 1] == "m" & SezGlob == "Coperture" & CantGlob == "Siracusa") {
-            ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) - 1] + '.jpg")';
-        }
-        else {
-            ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) - 1] + '.JPG")';
-        }
+        ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) - 1] + '.jpg")';
+        // if (abc[abc.indexOf(Curr) - 1] == "l") {
+        //     ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) - 1] + '.jpg")';
+        // }
+        // else {
+        //     ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) - 1] + '.JPG")';
+        // }
         if (Curr == "b") {
             document.getElementById("moveL").style.opacity = ".2";
             document.getElementById("moveL").classList.remove("Pointer");
@@ -69,12 +67,13 @@ function MoveL() {
 
 function MoveR() {
     if (Position != "last") {
-        if (abc[abc.indexOf(Curr) + 1] == "l" || abc[abc.indexOf(Curr) + 1] == "k" || abc[abc.indexOf(Curr) + 1] == "m" & SezGlob == "Coperture" & CantGlob == "Siracusa") {
-            ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) + 1] + '.jpg")';
-        }
-        else {
-            ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) + 1] + '.JPG")';
-        }
+        ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) + 1] + '.jpg")';
+        // if (abc[abc.indexOf(Curr) + 1] == "l" || abc[abc.indexOf(Curr) + 1] == "k" || abc[abc.indexOf(Curr) + 1] == "m") {
+        //     ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) + 1] + '.jpg")';
+        // }
+        // else {
+        //     ToChange.style.backgroundImage = ToChange.style.backgroundImage.slice(0, -7) + abc[abc.indexOf(Curr) + 1] + '.JPG")';
+        // }
         if (Curr == abc[len - 1]) {
             document.getElementById("moveR").style.opacity = ".2";
             document.getElementById("moveR").classList.remove("Pointer");

@@ -20,7 +20,6 @@ body {
     --SoftShadow: 0 2px 15px rgba(231, 231, 231, 0.03);
     --SoftShadow2: 0 -2px 15px rgba(231, 231, 231, 0.03);
     --SoftShadow3: 0 0px 15px rgba(231, 231, 231, 0.062);
-    --BoxShad: 15px 15px 35px rgba(197, 197, 197, 0.068),8px 8px 8px rgba(197, 197, 197, 0.068);
     --Scrollbar: 10px;
     --Header: 70px;
     --Footer: 102px;
@@ -54,9 +53,6 @@ body {
 }
 .TxtShadow2 {
     text-shadow: 0 0 15px rgb(34, 34, 34);
-}
-.TxtShadow3 {
-    text-shadow: 0 0 40px rgb(34, 34, 34);
 }
 ::-webkit-scrollbar {
     width: var(--Scrollbar);
