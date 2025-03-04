@@ -126,9 +126,9 @@ h1 {
 .imgBig #imgChild {
     max-height: 85%;
     width: 90%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 1/1;
     background-position: center;
-    background-size:cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 /* ========================= media ========================= */

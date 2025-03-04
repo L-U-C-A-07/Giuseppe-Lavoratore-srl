@@ -70,6 +70,13 @@ input::-webkit-inner-spin-button {
 #Info p {
     margin: 5px 0;
 }
+#Iemail {
+    width: 180px;
+    cursor: pointer;
+}
+#Iemail:hover {
+    color: var(--C1);
+}
 #ContactForm {
     background-color: #ffffffa2;
     backdrop-filter: blur(5px);
@@ -117,7 +124,7 @@ input, textarea {
     font-size: 15px;
     font-family: Outfit;
     background-color: transparent;
-    color: var(--C2);
+    color: var(--C3);
 }
 input:focus, textarea:focus {
     outline: solid 2px var(--C3);
