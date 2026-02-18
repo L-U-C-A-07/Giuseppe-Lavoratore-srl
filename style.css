@@ -37,39 +37,46 @@
 #UnderImg {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     min-height: calc(100vh - var(--Header) - var(--Footer));
     gap: 50px;
 }
-#ServiziImg {
+.HomeItem {
     position: relative;
+    width: calc(100% - 200px);
+    max-width: 1000px;
+}
+#ChiSiamoHome {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+#ServiziImg {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 200px);
-    background-color: var(--C3);
     /* ↓ DA TOGLIERE SE AGGIUNGO ALTRO ↓ */
     margin-bottom: 50px;
-}
-#ServiziImg h1 {
-    grid-column: 1 / span 3;
 }
 #GalleriaServizi {
     position: relative;
     width: 100%;
-    max-width: 800px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, calc((100% - (20px * 2))/3));
     grid-template-rows: 70px auto;
-    gap: 35px;
+    gap: 20px;
+}
+#ServiziImg h1, #ServiziImg p{
+    grid-column: 1 / span 3;
 }
 .ImgBox {
     position: relative;
     max-width: 100%;
-    width: 300px;
-    height: auto;
+    width: 100%;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
@@ -113,47 +120,33 @@
 }
 /* ========================= media ========================= */
 /* Rimpicciolisco Img Servizi */
-@media (max-width: 1010px) {
-    .ImgBox {
-        width: 220px;
-    }
-    .ImgBox div {
-        font-size: 35px;
-    }
+@media (max-width: 950px) {
     #GalleriaServizi {
-        gap: 20px;
+        grid-template-columns: repeat(2, calc((100% - 10px)/2));
+        gap: 10px
     }
-}
-@media (max-width: 745px) {
-    #ServiziImg h1 {
+    #ServiziImg h1, #ServiziImg p {
         grid-column: 1 / span 2;
     }
-    #GalleriaServizi {
-        grid-template-columns: auto auto;
-        gap: 30px;
-    }
-    .ImgBox {
-        width: 220px;
-    }
-    .ImgBox div {
-        font-size: 35px;
+}
+@media (max-width: 650px) {
+    .HomeItem {
+        width: calc(100% - 100px);
     }
 }
-@media (max-width: 520px) {
-    #ServiziImg {
-        width: calc(100% - 50px);
+@media (max-width: 540px) {
+    #GalleriaServizi {
+        grid-template-columns: repeat(1, calc(100%));
     }
-    #ServiziImg h1 {
+    #ServiziImg h1, #ServiziImg p {
         grid-column: 1;
     }
-    #GalleriaServizi {
-        grid-template-columns: auto;
-        gap: 30px;
+    .HomeItem {
+        width: calc(100% - 200px);
     }
-    .ImgBox {
-        width: 300px;
-    }
-    .ImgBox div {
-        font-size: 50px;
+}
+@media (max-width: 431px) {
+    .HomeItem {
+        width: calc(100% - 90px);
     }
 }

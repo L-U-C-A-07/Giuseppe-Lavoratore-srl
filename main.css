@@ -24,10 +24,6 @@ body {
     --Header: 70px;
     --Footer: 102px;
 }
-html {
-    /* mantiene la scrollbar anche per telefono e tablet */
-    scrollbar-gutter: stable;
-}
 /* ========================= main page ========================= */
 #Container {
     height: 100vh;
@@ -60,6 +56,9 @@ html {
 }
 .TxtShadow3 {
     text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.TxtC1 {
+    color: var(--C1);
 }
 ::-webkit-scrollbar {
     width: var(--Scrollbar);
@@ -300,6 +299,9 @@ html {
     }
     #MenuBtn {
         display: flex;
+    }
+    .checkBtn, #check {
+        margin-left: 60px;
     }
     /* tolgo la scrollbar dopo una certa width */
     :root {
