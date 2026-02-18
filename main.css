@@ -158,10 +158,10 @@ body {
     display: none;
     align-items: center;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; non mi ricordo perchè l'avevo messo*/
 }
 .checkBtn {
-    margin: calc((var(--Header) - 21px) / 2) 0;
+    margin: calc((var(--Header) - 20.8px) / 2) 0;
 }
 .checkBtn i {
     font-size: 20px;
