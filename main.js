@@ -1,9 +1,8 @@
 // !! VALE PER TUTTE LE PAGINE !!
 
 console.log("%cWebsite under development", "color: red; font-size: 20px; font-famili: sans-serif;");
-console.log("v 0.4.20\n© Giuseppe Lavoratore s.r.l. 2026 all rights reserved");
+console.log("v 0.4.21\n© Giuseppe Lavoratore s.r.l. 2026 all rights reserved");
 // da aggiustare footer
-// impostare link x immagini e servizi (anche nel footer)
 // modificare il footer su tutte le pagine
 
 // Navigation Menu Icon Change
@@ -37,7 +36,9 @@ window.addEventListener("scroll", () => {
 })
 
 // copy to clipboard
-function Copia(ogg, txt) {
-    navigator.clipboard.writeText(txt);
-    alert(ogg + " copied");
+function Copia(ogg) {
+    if (ogg == "email") {
+        navigator.clipboard.writeText("ciao@gmail.com");
+        alert(ogg + " copied");
+    }
 }
