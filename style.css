@@ -91,6 +91,7 @@
 .ImgBox a:hover {
     /* box-shadow: inset 0px 6px var(--C1), inset 0px -6px var(--C1); */
     color: var(--C1);
+    text-shadow: 0 0 10px var(--C3);
 }
 .ImgBox.img1 {
     background-image: url(Images/HomeSV/a.JPG);

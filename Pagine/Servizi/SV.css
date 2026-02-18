@@ -45,6 +45,7 @@
     width: calc(100vw - 250px * 2);
 }
 .ServCont {
+    width: 100%;
     display: grid;
 }
 .ServCont.disp {
@@ -53,27 +54,17 @@
 .ServCont h1 {
     color: var(--C1);
 }
-/* .ServImage {
-    height: 320px;
-    aspect-ratio: 8/9;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--BoxShad);
+/* ========================= media ========================= */
+/* aggiusto elenco servizi */
+@media (max-width: 820px) {
+    #ElencoServizi {
+        padding: 50px 150px;
+        width: calc(100vw - 150px * 2);
+    }
 }
-.ServImage::before {
-    content: "";
-    width: 400px;
-    height: 7px;
-    position: relative;
-    top: calc((320px / 2) - (7px / 2));
-    background-color: var(--C1);
+@media (max-width: 615px) {
+    #ElencoServizi {
+        padding: 50px 50px;
+        width: calc(100vw - 50px * 2);
+    }
 }
-.ServImage:hover::before{
-    left: 300px;
-    height: 100px;
-}
-.ServCont .ServImage img {
-    height: 100%;
-} */

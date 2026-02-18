@@ -24,6 +24,10 @@ body {
     --Header: 70px;
     --Footer: 102px;
 }
+html {
+    /* mantiene la scrollbar anche per telefono e tablet */
+    scrollbar-gutter: stable;
+}
 /* ========================= main page ========================= */
 #Container {
     height: 100vh;
@@ -53,6 +57,9 @@ body {
 }
 .TxtShadow2 {
     text-shadow: 0 0 15px rgb(34, 34, 34);
+}
+.TxtShadow3 {
+    text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 ::-webkit-scrollbar {
     width: var(--Scrollbar);
@@ -293,6 +300,10 @@ body {
     }
     #MenuBtn {
         display: flex;
+    }
+    /* tolgo la scrollbar dopo una certa width */
+    :root {
+        --Scrollbar: 0px;
     }
 }
 /* @media (max-width: 675px) {
