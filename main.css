@@ -17,6 +17,7 @@ body {
     --C2: #fff;
     --C2t: #ffffff00;
     --C3: rgb(43,43,43);/* #131313 */
+    --C4: #252525a8;
     --SoftShadow: 0 2px 15px rgba(231, 231, 231, 0.03);
     --SoftShadow2: 0 -2px 15px rgba(231, 231, 231, 0.03);
     --SoftShadow3: 0 0px 15px rgba(231, 231, 231, 0.062);

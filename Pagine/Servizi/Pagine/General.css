@@ -46,38 +46,90 @@ h1 {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: calc(100% - 200px);
+    width: calc(100% - 300px);
     background-color: var(--C3);
     padding-top: 30px;
+    margin-bottom: 100px;
 }
 #Cantieri h1, #Cantieri h2 {
     white-space: nowrap;
     margin: 5px 0;
 }
 .Cantiere {
-    padding: 10px 0;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 10px;
-    margin-bottom: 50px;
+    height: 300px;
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 100%;
+    padding: 10px 0 0 4px;
+}
+.dot {
+    position: relative;
+    right: 1.3px;
 }
 .img {
     position: relative;
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
-    width: 100%;
-    aspect-ratio: 1/1;
+    height: 100%;
+    aspect-ratio: 13/9;
+    transition: all .2s;
+    border-radius: 2px;
+    box-shadow: -4px 0 var(--C1),
+        15px 10px 7px var(--C4);
+    display: flex;
+    align-items: flex-end;
+}
+.imgInfo {
+    font-size: 35px;
+    margin: 0 0 5px 10px;
+}
+.altre {
+    position: relative;
+    height: 100%;
+    width: 90px;
+    border-radius: 2px;
+    outline: solid 2px var(--C4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: all .2s;
-    outline: solid 2px var(--C3);
+    overflow: hidden;
+    box-shadow: 0 0 0 var(--C1),
+        15px 10px 7px var(--C4);
 }
-.img:hover {
+.altre:hover {
     outline: solid 2px var(--C1);
-    box-shadow: 0 0 8px var(--C1);
-    border-radius: 2px;
+    box-shadow: 0 0 8px var(--C1),
+        15px 10px 7px var(--C4);
 }
-#ImgZoom {
+.altre p {
+    white-space: nowrap;
+    position: absolute;
+    font-family: outfit;
+    font-weight: bold;
+    rotate: 90deg;
+    font-size: 40px;
+    transition: all .2s;
+}
+.altre:hover p {
+    color: var(--C1);
+    text-shadow: 0 0 8px var(--C3);
+}
+.altreImg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(../../../Images/SV/Coperture/Siracusa/3.JPG);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    color: var(--C2);
+}
+/* #ImgZoom {
     display: none;
     position: fixed;
     top: 0;
@@ -130,35 +182,13 @@ h1 {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-}
+} */
 /* ========================= media ========================= */
-@media (max-width: 1150px) {
+/* @media (max-width: 1150px) {
     .Cantiere {
         grid-template-columns: repeat(3, auto);
     }
     #Cantieri {
         width: calc(100% - 120px);
     }
-}
-@media (max-width: 705px) {
-    .Cantiere {
-        grid-template-columns: repeat(2, auto);
-    }
-    #Cantieri {
-        width: calc(100% - 70px);
-    }
-    .imgBig #imgChild {
-        width: 100%;
-    }
-}
-@media (max-width: 450px) {
-    .Cantiere {
-        grid-template-columns: auto;
-    }
-    #Cantieri {
-        width: calc(100% - 90px);
-    }
-    .imgBig #imgChild {
-        width: 100%;
-    }
-}
+} */
