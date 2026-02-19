@@ -49,10 +49,10 @@ h1 {
     width: calc(100% - 300px);
     background-color: var(--C3);
     padding-top: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    height: fit-content;
 }
 #Cantieri h1, #Cantieri h2 {
-    white-space: nowrap;
     margin: 5px 0;
 }
 .Cantiere {
@@ -106,8 +106,8 @@ h1 {
         15px 10px 7px var(--C4);
 }
 .altre p {
-    white-space: nowrap;
     position: absolute;
+    white-space: nowrap;
     font-family: outfit;
     font-weight: bold;
     rotate: 90deg;
@@ -184,11 +184,76 @@ h1 {
     background-repeat: no-repeat;
 } */
 /* ========================= media ========================= */
-/* @media (max-width: 1150px) {
+@media (max-width: 1400px) {
     .Cantiere {
-        grid-template-columns: repeat(3, auto);
+        height: 250px;
+        gap: 15px;
     }
     #Cantieri {
-        width: calc(100% - 120px);
+        width: calc(100% - 200px);
     }
-} */
+}
+@media (max-width: 1115px) {
+    .dot {
+        display: none;
+    }
+    #Cantieri {
+        width: calc(100% - 90px);
+    }
+    /* .Cantiere {
+        gap: 15px;
+        height: fit-content;
+    }
+    #Cantieri {
+        width: calc(100% - 90px);
+    }
+    .img {
+        width: 100%;
+        height: auto;
+    } */
+}
+@media (max-width: 965px) {
+    .Cantiere {
+        display: grid;
+        grid-template-columns: repeat(2, 350px);
+        width: fit-content;
+        height: fit-content;
+    }
+    .img {
+        width: 100%;
+        height: auto;
+    }
+    .altre {
+        grid-column: 1 / span 2;
+        width: calc(100% + 4px);
+        height: 50px;
+        position: relative;
+        right: 4px;
+    }
+    .altre p {
+        rotate: 0deg;
+    }
+}
+@media (max-width: 820px) {
+    .Cantiere {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+    }
+    .img {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 650px) {
+    #Cantieri {
+        width: 80%;
+        max-width: 400px;
+    }
+    #Cantieri h2 {
+        font-size: 20px;
+    }
+    .Cantiere {
+        width: 100%;
+    }
+}
