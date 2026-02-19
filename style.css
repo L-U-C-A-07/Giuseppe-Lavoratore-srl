@@ -83,6 +83,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transition: all .2s;
+    outline: solid 0px var(--C1);
 }
 .ImgBox a {
     width: 100%;
@@ -93,18 +95,23 @@
     font-size: 50px;
     font-family: teko;
     box-shadow: inset 0px 0px lightgrey;
-    transition: .4s;
+    transition: all .4s;
 }
 .ImgBox a:hover {
     /* box-shadow: inset 0px 6px var(--C1), inset 0px -6px var(--C1); */
     color: var(--C1);
     text-shadow: 0 0 10px var(--C3);
 }
+.ImgBox:hover {
+    outline: solid 2px var(--C1);
+    box-shadow: 0 0 8px var(--C1);
+    border-radius: 2px;
+}
 .ImgBox.img1 {
     background-image: url(Images/HomeSV/a.JPG);
 }
 .ImgBox.img2 {
-    background-image: url(Images/HomeSV/b.JPG);
+    background-image: url(Images/HomeSV/b.jpg);
 }
 .ImgBox.img3 {
     background-image: url(Images/HomeSV/c.JPG);

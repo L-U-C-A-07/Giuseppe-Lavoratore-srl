@@ -1,7 +1,7 @@
 // !! VALE PER TUTTE LE PAGINE !!
 
 console.log("%cWebsite under development", "color: red; font-size: 20px; font-famili: sans-serif;");
-console.log("v 0.4.21\n© Giuseppe Lavoratore s.r.l. 2026 all rights reserved");
+console.log("v 0.4.22\n© Giuseppe Lavoratore s.r.l. 2026 all rights reserved");
 // da aggiustare footer
 // modificare il footer su tutte le pagine
 
@@ -38,7 +38,7 @@ window.addEventListener("scroll", () => {
 // copy to clipboard
 function Copia(ogg) {
     if (ogg == "email") {
-        navigator.clipboard.writeText("ciao@gmail.com");
+        navigator.clipboard.writeText("giuseppe.lavoratore@libero.it");
         alert(ogg + " copied");
     }
 }

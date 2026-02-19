@@ -35,7 +35,7 @@ input::-webkit-inner-spin-button {
 #InfoContainer {
     background-color: #ffffffa2;
     z-index: 1;
-    padding: 10px 30px 10px 40px;
+    padding: 10px 20px 10px 20px;
     border-radius: 0 8px 8px 0;
     border: solid 2px #ffffffa2;
     border-left: none;
@@ -64,7 +64,7 @@ input::-webkit-inner-spin-button {
     user-select: text;
 }
 #Info i, #Info p {
-    font-size: 13px;
+    font-size: 10.5px;
     color: var(--C3);
 }
 #Info p {
@@ -165,14 +165,18 @@ input:focus, textarea:focus {
     box-shadow: 0 0 #0797da;
     transform: translate(0);
 }
+/* ========================= footer ========================= */
+#footer {
+    width: calc(100vw - var(--Scrollbar));
+}
 /* ========================= media ========================= */
-@media (min-width: 850px) {
+@media (min-width: 851px) {
     /* full screen quando non si scorre */
     #Header, #ContentContainer {
         width: 100vw;
     }
     #footer {
-        width: calc(100vw - 10px);
+        width: 100vw;
     }
 }
 @media (max-width: 850px) {
@@ -191,6 +195,10 @@ input:focus, textarea:focus {
         border-radius: 0;
         border-top: solid 2px #ffffffa2;
     }
+    #Info i, #Info p {
+        font-size: 13px;
+        color: var(--C3);
+    }
 }
 @media (max-width: 590px) {
     #ContactForm {
@@ -200,7 +208,7 @@ input:focus, textarea:focus {
         height: 130%;
     }
 }
-@media (min-width: 850px) {
+@media (min-width: 851px) {
     #ContactForm, #InfoContainer {
         position: absolute;
         left: 50%;
