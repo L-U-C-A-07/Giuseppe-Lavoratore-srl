@@ -49,7 +49,6 @@ h1 {
     width: calc(100% - 300px);
     background-color: var(--C3);
     padding-top: 30px;
-    margin-bottom: 50px;
     height: fit-content;
 }
 #Cantieri h1, #Cantieri h2 {
@@ -62,6 +61,8 @@ h1 {
     gap: 30px;
     max-width: 100%;
     padding: 10px 0 0 4px;
+    width: fit-content;
+    margin-bottom: 70px;
 }
 .dot {
     position: relative;
@@ -122,7 +123,6 @@ h1 {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: url(../../../Images/SV/Coperture/Siracusa/3.JPG);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
