@@ -65,6 +65,7 @@ function MoveR() {
         };
         img.onerror = function() {
             // Se .jpg fallisce, prova con .JPG
+            print("Rirpovo")
             ToChange.style.backgroundImage = `url(${pathBase}.JPG)`;
         };
         img.src = `${pathBase}.jpg`; // Avvia il primo tentativo
