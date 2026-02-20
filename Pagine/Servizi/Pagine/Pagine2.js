@@ -12,11 +12,17 @@ function OpenImg(Sezione, Cantiere, n) {
     len = n;
     sez = Sezione
     cant = Cantiere
-    try {
-        ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + sez + '/' + cant + '/1.jpg)';
-    } catch(error) {
-        ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + sez + '/' + cant + '/1.JPG)';
+    let pathBase = `../../../../Images/SV/${sez}/${cant}/${Curr}`;
+    let img = new Image();
+    img.onload = function() {
+        // Se la trova con .jpg, la applica
+        ToChange.style.backgroundImage = `url(${pathBase}.jpg)`;
     };
+    img.onerror = function() {
+        // Se .jpg fallisce, prova con .JPG
+        ToChange.style.backgroundImage = `url(${pathBase}.JPG)`;
+    };
+    img.src = `${pathBase}.jpg`; // Avvia il primo tentativo
     document.getElementById("moveL").style.opacity = ".2";
     document.getElementById("moveL").classList.remove("Pointer");
     document.getElementById("moveR").style.opacity = "1";
@@ -28,11 +34,17 @@ function OpenImg(Sezione, Cantiere, n) {
 
 function MoveL() {
     if (Curr != 1) {
-        try {
-            ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + sez + '/' + cant + '/' + String(Curr - 1) + '.jpg)';
-        } catch (error) {
-            ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + sez + '/' + cant + '/' + String(Curr - 1) + '.JPG)';
-        }
+        let pathBase = `../../../../Images/SV/${sez}/${cant}/${Curr - 1}`;
+        let img = new Image();
+        img.onload = function() {
+            // Se la trova con .jpg, la applica
+            ToChange.style.backgroundImage = `url(${pathBase}.jpg)`;
+        };
+        img.onerror = function() {
+            // Se .jpg fallisce, prova con .JPG
+            ToChange.style.backgroundImage = `url(${pathBase}.JPG)`;
+        };
+        img.src = `${pathBase}.jpg`; // Avvia il primo tentativo
         if (Curr == 2) {
             document.getElementById("moveL").style.opacity = ".2";
             document.getElementById("moveL").classList.remove("Pointer");
@@ -45,11 +57,17 @@ function MoveL() {
 
 function MoveR() {
     if (Curr != len) {
-        try {
-            ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + sez + '/' + cant + '/' + String(Curr + 1) + '.jpg)';
-        } catch (error) {
-            ToChange.style.backgroundImage = 'url(../../../../Images/SV/' + sez + '/' + cant + '/' + String(Curr + 1) + '.JPG)';
-        }
+        let pathBase = `../../../../Images/SV/${sez}/${cant}/${Curr + 1}`;
+        let img = new Image();
+        img.onload = function() {
+            // Se la trova con .jpg, la applica
+            ToChange.style.backgroundImage = `url(${pathBase}.jpg)`;
+        };
+        img.onerror = function() {
+            // Se .jpg fallisce, prova con .JPG
+            ToChange.style.backgroundImage = `url(${pathBase}.JPG)`;
+        };
+        img.src = `${pathBase}.jpg`; // Avvia il primo tentativo
         if (Curr == len - 1) {
             document.getElementById("moveR").style.opacity = ".2";
             document.getElementById("moveR").classList.remove("Pointer");
