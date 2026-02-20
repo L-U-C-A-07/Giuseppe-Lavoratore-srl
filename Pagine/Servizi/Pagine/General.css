@@ -129,7 +129,7 @@ h1 {
     filter: blur(3px);
     color: var(--C2);
 }
-/* #ImgZoom {
+#ImgZoom {
     display: none;
     position: fixed;
     top: 0;
@@ -182,7 +182,7 @@ h1 {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-} */
+}
 /* ========================= media ========================= */
 @media (max-width: 1400px) {
     .Cantiere {
