@@ -1,6 +1,5 @@
 var ImgZoom = document.getElementById("ImgZoom");
 let h = document.querySelector("html");
-const abc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t"];
 let ToChange = document.getElementById("imgChild");
 var Curr
 var len
