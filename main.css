@@ -17,7 +17,7 @@ body {
     --C2: #fff;
     --C2t: #ffffff00;
     --C3: rgb(43,43,43);/* #131313 */
-    --C4: #252525a8;
+    --C4: #25252592;
     --SoftShadow: 0 2px 15px rgba(231, 231, 231, 0.03);
     --SoftShadow2: 0 -2px 15px rgba(231, 231, 231, 0.03);
     --SoftShadow3: 0 0px 15px rgba(231, 231, 231, 0.062);
@@ -109,7 +109,7 @@ body {
     display: table-cell;
     vertical-align: middle;
     width: 100%;
-    border-bottom: 2px var(--C2t) solid;
+    border-bottom: 2px rgba(255, 255, 255, 0) solid;
     transition: .5s;
     white-space: nowrap;
 }
@@ -199,7 +199,7 @@ body {
     color: var(--C2);
 }
 #NavigationMenu a li {
-    border-bottom: 2px var(--C2t) solid;
+    border-bottom: 2px rgba(255, 255, 255, 0) solid;
     transition: .5s;
     white-space: nowrap;
     width: fit-content;

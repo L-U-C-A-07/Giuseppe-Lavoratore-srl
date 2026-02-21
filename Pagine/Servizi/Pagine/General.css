@@ -39,9 +39,6 @@
     min-height: calc(100vh - var(--Header) - var(--Footer));
     gap: 50px;
 }
-h1 {
-    color: var(--C1);
-}
 #Cantieri {
     position: relative;
     display: flex;
@@ -182,6 +179,10 @@ h1 {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+h1 {
+    color: var(--C1);
+    margin-bottom: 10px !important;
 }
 /* ========================= media ========================= */
 @media (max-width: 1400px) {
