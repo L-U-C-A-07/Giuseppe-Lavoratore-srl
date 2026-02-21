@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giuseppe Lavoratore srl</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- style (css) -->
+    <link rel="stylesheet" href="../../../../main.css">
+    <link rel="stylesheet" href="../General.css">
+    <link rel="stylesheet" href="Palestre.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</link>
+</head>
+<body>
+    
+    <div id="Container">
+
+        <div id="Header">
+            <div id="InnerHeader">
+
+                <a href="../../../../index.html">
+                    <img src="../../../../Images/WhiteLogo.png" class="OriginalLogo">
+                </a>
+    
+                <ul class="navigation">
+                    <a href="../../../../index.html"><li class="Pointer TxtShadow">Home</li></a>
+                    <a href="../../../ChiSiamo/CS.html"><li class="Pointer TxtShadow">Chi Siamo</li></a>
+                    <div class="dropdown">
+                        <a href="../../../Servizi/SV.html"><li class="Pointer Active TxtShadow">Servizi</li></a>
+                        <div class="dropdown-content">
+                            <a href="../Coperture/Coperture.html" class="link">Coperture</a>
+                            <a href="../Facciate/Facciate.html" class="link">Facciate</a>
+                            <a href="../RifacimentoInterni/RifacimentoInterni.html" class="link">Rifacimento Interni</a>
+                            <a href="../Piscine/Piscine.html" class="link">Piscine</a>
+                            <a href="../PavimentiIndustriali/PavimentiIndustriali.html" class="link">Pavimenti Industriali</a>
+                            <a href="../ProntoIntervento/ProntoIntervento.html" class="link">Pronto Intervento</a>
+                        </div>
+                    </div>
+                    <a href="../../../Contattaci/CO.html"><li class="Pointer TxtShadow">Contattaci</li></a>
+                </ul>
+                
+                <div id="MenuBtn">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkBtn Pointer">
+                        <i class="fa fa-bars" onclick="ChangeIcon(this)"></i>
+                    </label>
+                    <ul id="NavigationMenu">
+                        <a href="../../../../index.html"><li class="Pointer">Home</li></a>
+                        <a href="../../../ChiSiamo/CS.html"><li class="Pointer">Chi Siamo</li></a>
+                        <a><li class="Pointer Active">Servizi</li></a>
+                        <a href="../../../Contattaci/CO.html"><li class="Pointer">Contattaci</li></a>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="ContentContainer">
+            <div id="FirstScreen">
+                <div id="FirstScreenBG"></div>
+                <div id="Title" class="TxtShadow2">Palestre</div>
+                <div id="BlackCover"></div>
+            </div>
+            <div id="UnderImg">
+                <div id="Cantieri">
+                    <h1>Realizzati</h1>
+                    <h2>• Avigliana (TO)</h2>
+                    <div class="Cantiere">
+                        <div class="img" style="background-image: url('../../../../Images/SV/Palestre/Avigliana/1.jpg');">
+                            <p class="TxtShadow2 imgInfo">prima</p>
+                        </div>
+                        <h2 class="dot">• • •</h2>
+                        <div class="img" style="background-image: url('../../../../Images/SV/Palestre/Avigliana/12.jpg');">
+                            <p class="TxtShadow2 imgInfo">dopo</p>
+                        </div>
+                        <div onclick="OpenImg('Palestre', 'Avigliana', 12)" class="altre">
+                            <div class="altreImg" style="background-image: url(../../../../Images/SV/Palestre/Avigliana/4.jpg);"></div>
+                            <p class="TxtShadow2">ALTRE</p>
+                        </div>
+                    </div>
+                    <h2>• Snos</h2>
+                    <div class="Cantiere">
+                        <div class="img" style="background-image: url('../../../../Images/SV/Palestre/Snos/1.jpg');">
+                            <p class="TxtShadow2 imgInfo">prima</p>
+                        </div>
+                        <h2 class="dot">• • •</h2>
+                        <div class="img" style="background-image: url('../../../../Images/SV/Palestre/Snos/5.jpg');">
+                            <p class="TxtShadow2 imgInfo">dopo</p>
+                        </div>
+                        <div onclick="OpenImg('Palestre', 'Snos', 17)" class="altre">
+                            <div class="altreImg" style="background-image: url(../../../../Images/SV/Palestre/Snos/4.jpg);"></div>
+                            <p class="TxtShadow2">ALTRE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ImgZoom">
+            <div class="BG"></div>
+            <div id="BigImg">
+                <div onclick="MoveL()" id="moveL" class="Pointer fa-solid fa-angle-left"></div>
+                <div class="imgBig">
+                    <div id="imgChild"></div>
+                    <div id="description" style="font-size:30px;"></div>
+                </div>
+                <div onclick="MoveR()" id="moveR" class="Pointer fa-solid fa-angle-right"></div>
+            </div>
+            <button class="closeBtn fa-solid fa-xmark Pointer" onclick="CloseImg()"></button>
+        </div>
+
+        <div id="footer">
+            <div id="f1">
+                <a href="../../../../index.html">
+                    <img src="../../../../Images/WhiteLogo.png" alt="Logo">
+                </a>
+            </div>
+            <div id="f2">
+                <h3>Contatti</h3>
+                <div>
+                    <a href="" class="link">
+                        <i class="fa-brands fa-instagram"></i>
+                        <p>luca.dalboni</p>
+                    </a>
+                    <a href="" class="link">
+                        <i class="fa-brands fa-facebook"></i>
+                        <p>boh</p>
+                    </a>
+                    <a onclick="Copia('email', 'abc@mail')" class="link Pointer">
+                        <i class="fa fa-envelope"></i>
+                        <p>email@gmail.com</p>
+                    </a>
+                </div>
+            </div>
+            <hr style="margin: 8px 0;">
+            <div id="f3">
+                <h3>Servizi</h3>
+                <div>
+                    <a href="" class="link">
+                        <p>Coperture</p>
+                    </a>
+                    <a href="" class="link">
+                        <p>Facciate</p>
+                    </a>
+                    <a href="" class="link">
+                        <p>Rifacimento Interni</p>
+                    </a>
+                    <a href="" class="link">
+                        <p>Piscine</p>
+                    </a>
+                    <a href="" class="link">
+                        <p>Pavimenti Industriali</p>
+                    </a>
+                    <a href="" class="link">
+                        <p>Pronto Intervento</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- script (js) -->
+    <script src="../../../../main.js"></script>
+    <script src="../../../../script.js"></script>
+    <script src="../Pagine2.js"></script>
+
+</body>
+</html>

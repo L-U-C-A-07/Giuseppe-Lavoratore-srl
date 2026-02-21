@@ -65,7 +65,7 @@ body {
     width: var(--Scrollbar);
 }
 ::-webkit-scrollbar-track {
-    background: #0c0c0ce2;
+    background: #272727;
     padding: 2px;
     width: 4px;
 }

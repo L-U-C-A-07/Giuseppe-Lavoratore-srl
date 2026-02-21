@@ -1,7 +1,7 @@
 // !! VALE PER TUTTE LE PAGINE !!
 
 console.log("%cWebsite under development", "color: red; font-size: 20px; font-famili: sans-serif;");
-console.log("v 0.5.5\n© Giuseppe Lavoratore s.r.l. 2026 all rights reserved");
+console.log("v 0.5.6\n© Giuseppe Lavoratore s.r.l. 2026 all rights reserved");
 // da aggiustare footer
 // modificare il footer su tutte le pagine
 

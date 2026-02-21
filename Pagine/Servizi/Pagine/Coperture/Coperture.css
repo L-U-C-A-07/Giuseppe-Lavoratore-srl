@@ -2,3 +2,30 @@
 #FirstScreenBG {
     background-image: url("../../../../Images/SV/Coperture/Back.JPG");
 }
+.Collage {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin: 40px 0 70px 0;
+    gap: 5%;
+    padding: 0 40px;
+}
+#riga {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 8px;
+    width: 100%;
+    border-radius: 100px;
+    background-color: var(--C2);
+    z-index: 1;
+    transform: translate(0, -50%);
+}
+.CollImg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 1/1;
+    z-index: 2;
+}
