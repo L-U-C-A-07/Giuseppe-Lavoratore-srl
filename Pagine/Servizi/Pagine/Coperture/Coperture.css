@@ -14,7 +14,7 @@
     position: absolute;
     left: 0;
     top: 50%;
-    height: 8px;
+    height: 3px;
     width: 100%;
     border-radius: 100px;
     background-color: var(--C2);
@@ -28,4 +28,25 @@
     width: 100%;
     aspect-ratio: 1/1;
     z-index: 2;
+    box-shadow: 15px 10px 7px var(--C4);
+    transition: all .2s;
+    border-radius: 2px;
+}
+.CollImg:hover {
+    transform: translate(-8px, -8px);
+}
+/* ========================= media ========================= */
+@media (max-width: 650px) {
+    .Collage {
+        grid-template-columns: repeat(2, auto);
+        width: 100%;
+        aspect-ratio: 1/1;
+        padding: 0;
+    }
+    #riga {
+        display: none;
+    }
+    .CollImg:hover {
+        transform: translate(-5px, -5px);
+    }
 }
