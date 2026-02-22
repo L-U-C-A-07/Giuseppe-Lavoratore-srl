@@ -79,6 +79,14 @@
     display: flex;
     align-items: flex-end;
 }
+.img, .altre {
+    transform: translateY(40px);
+    scale: .7;
+}
+.img.show, .altre.show {
+    transform: translateY(0);
+    scale: 1;
+}
 .imgInfo {
     font-size: 35px;
     margin: 0 0 5px 10px;

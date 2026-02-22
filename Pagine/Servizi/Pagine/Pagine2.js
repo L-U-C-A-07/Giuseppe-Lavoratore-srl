@@ -6,6 +6,7 @@ var len
 var sez
 var cant
 
+// Funzioni zoom immagini
 function OpenImg(Sezione, Cantiere, n) {
     if (Sezione != "") {
         Curr = 1;
@@ -93,3 +94,34 @@ function CloseImg() {
     ImgZoom.style.display = "none";
     h.style.overflowY = "scroll";
 }
+
+// Animazione scorrimento
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // Configuriamo l'osservatore
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            // Se l'elemento è visibile (isIntersecting è true)
+            if (entry.isIntersecting) {
+                // Aggiungiamo la classe CSS che attiva l'animazione
+                entry.target.classList.add('show');
+            }
+        });
+    }, {
+        // Parte quando l'immagine è visibile almeno per il 15%
+        threshold: 0.15 
+    });
+
+    // Selezioniamo tutte le immagini della galleria
+    const immagini = document.querySelectorAll('.img');
+    const altre = document.querySelectorAll('.altre');
+    
+    // Diciamo all'osservatore di monitorare ogni immagine
+    immagini.forEach((img) => {
+        observer.observe(img);
+    });
+    altre.forEach((img) => {
+        observer.observe(img);
+    });
+
+});
