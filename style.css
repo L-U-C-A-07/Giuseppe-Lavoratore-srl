@@ -122,9 +122,6 @@
 .ImgBox.img5 {
     background-image: url(Images/HomeSV/e.JPG);
 }
-.ImgBox.img6 {
-    background-image: url(Images/HomeSV/f.JPG);
-}
 /* ========================= media ========================= */
 /* Rimpicciolisco Img Servizi */
 @media (max-width: 950px) {

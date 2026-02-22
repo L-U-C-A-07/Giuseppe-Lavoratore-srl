@@ -1,9 +1,11 @@
 // !! VALE PER TUTTE LE PAGINE !!
 
 console.log("%cWebsite under development", "color: red; font-size: 20px; font-famili: sans-serif;");
-console.log("v 0.5.7\n© Giuseppe Lavoratore s.r.l. 2026 all rights reserved");
+console.log("v 0.5.8\n© Giuseppe Lavoratore s.r.l. 2026 all rights reserved");
 // da aggiustare footer
 // modificare il footer su tutte le pagine
+// mettere il watermark a tutti i png
+// modificare tutte le immagini in webp
 
 // Navigation Menu Icon Change
 let ChangeIcon = function(icon) {
